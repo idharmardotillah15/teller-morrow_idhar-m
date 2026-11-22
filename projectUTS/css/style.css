@@ -1,0 +1,559 @@
+:root {
+  --idhar-black: #141414;
+  --idhar--gray: #6b6b6b;
+  --idhar--light: #f3f2ef;
+  --idhar--beige: #c9b79c;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--idhar-black);
+  background: #fff;
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.15;
+  font-weight: 700;
+}
+.idhar_container {
+  width: min(1200px, 92%);
+  margin: auto;
+}
+.idhar_section {
+  padding: 72px 0;
+}
+.idhar_section-alt {
+  background: var(--idhar-light);
+}
+.idhar_title {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  margin-bottom: 10px;
+}
+.idhar_sub {
+  color: var(--idhar-gray);
+  margin-bottom: 32px;
+}
+#idhar_header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e4e2dd;
+  backdrop-filter: blur(8px);
+}
+.idhar_navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+.idhar_logo {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: 0.18em;
+}
+.idhar_logo span {
+  color: var(--idhar-beige);
+  margin-left: 0.3em;
+}
+.idhar_menu {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+.idhar_menu a {
+  font-size: 0.92rem;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: 0.25s;
+}
+.idhar_menu a:hover,
+.idhar_menu a.idhar_active {
+  border-color: var(--idhar-black);
+}
+.idhar_cart-link {
+  font-weight: 600;
+}
+.idhar_cart-count {
+  background: var(--idhar-black);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  padding: 2px 7px;
+  margin-left: 5px;
+}
+.idhar_toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.idhar_btn {
+  display: inline-block;
+  padding: 13px 30px;
+  border: 2px solid var(--idhar-black);
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  font-size: 0.95rem;
+  transition: 0.25s;
+}
+.idhar_btn:hover {
+  transform: translateY(-2px);
+}
+.idhar_btn-dark {
+  background: var(--idhar-black);
+  color: #fff;
+}
+.idhar_btn-dark:hover {
+  background: #333;
+}
+.idhar_btn-light {
+  background: #fff;
+  border-color: #fff;
+  color: var(--idhar-black);
+}
+.idhar_btn-sm {
+  padding: 9px 18px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+#idhar_hero {
+  background: #1f1f1f;
+  color: #fff;
+  overflow: hidden;
+}
+.idhar_hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: 30px;
+  min-height: 560px;
+}
+.idhar_hero-grid h1 {
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  margin: 12px 0 18px;
+}
+.idhar_hero-grid p {
+  color: #c8c8c8;
+  max-width: 440px;
+  margin-bottom: 28px;
+}
+.idhar_tag {
+  color: var(--idhar-beige);
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+}
+.idhar_hero-grid img {
+  transition: transform 0.6s;
+}
+.idhar_hero-grid img:hover {
+  transform: rotate(-4deg) scale(1.04);
+}
+.idhar_page-banner {
+  background: var(--idhar-light);
+  padding: 56px 0 24px;
+  border-bottom: 1px solid #e4e2dd;
+}
+.idhar_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.idhar_grid-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.idhar_grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.idhar_product-card {
+  background: #fff;
+  border: 1px solid #e8e6e1;
+  transition: 0.3s;
+}
+.idhar_product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.12);
+}
+.idhar_card-img {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.idhar_card-img img {
+  width: 100%;
+  transition: transform 0.4s;
+}
+.idhar_product-card:hover .idhar_card-img img {
+  transform: scale(1.06);
+}
+.idhar_badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--idhar-black);
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 4px 10px;
+}
+.idhar_card-body {
+  padding: 16px;
+  display: grid;
+  gap: 6px;
+}
+.idhar_card-body small {
+  color: var(--idhar-gray);
+}
+.idhar_card-body h3 {
+  font-size: 1.05rem;
+}
+.idhar_brand-card {
+  display: block;
+  overflow: hidden;
+  background: var(--idhar-light);
+  text-align: center;
+  padding-bottom: 14px;
+  transition: 0.3s;
+}
+.idhar_brand-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+}
+.idhar_brand-card h3 {
+  font-size: 1.1rem;
+}
+.idhar_promo {
+  background: var(--idhar-beige);
+  padding: 60px 0;
+  text-align: center;
+}
+.idhar_promo h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-bottom: 10px;
+}
+.idhar_promo p {
+  margin-bottom: 22px;
+}
+.idhar_toolbar {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.idhar_input,
+.idhar_select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cfcdc8;
+  font: inherit;
+  background: #fff;
+}
+.idhar_input:focus,
+.idhar_select:focus,
+.idhar_btn:focus-visible {
+  outline: 2px solid var(--idhar-black);
+  outline-offset: 2px;
+}
+.idhar_empty {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 50px;
+  color: var(--idhar-gray);
+}
+.idhar_detail {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+}
+.idhar_detail-info {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+.idhar_price {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.idhar_sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+.idhar_size {
+  width: 48px;
+  height: 44px;
+  border: 1px solid #cfcdc8;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.idhar_size:hover {
+  border-color: var(--idhar-black);
+}
+.idhar_size.idhar_selected {
+  background: var(--idhar-black);
+  color: #fff;
+}
+.idhar_qty {
+  display: inline-flex;
+  border: 1px solid #cfcdc8;
+  margin-top: 8px;
+}
+.idhar_qty button {
+  width: 40px;
+  border: 0;
+  background: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.idhar_qty span {
+  width: 44px;
+  text-align: center;
+  line-height: 42px;
+}
+.idhar_spec {
+  width: 100%;
+  border-collapse: collapse;
+}
+.idhar_spec td {
+  padding: 9px 0;
+  border-bottom: 1px solid #e4e2dd;
+}
+.idhar_spec td:first-child {
+  color: var(--idhar-gray);
+  width: 38%;
+}
+.idhar_cart-row {
+  display: grid;
+  grid-template-columns: 100px 1fr auto auto auto;
+  gap: 20px;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #e4e2dd;
+}
+.idhar_cart-row img {
+  width: 100px;
+}
+.idhar_remove {
+  background: none;
+  border: 0;
+  color: #b00020;
+  cursor: pointer;
+  font-weight: 600;
+}
+.idhar_summary {
+  margin-top: 30px;
+  margin-left: auto;
+  max-width: 380px;
+  background: var(--idhar-light);
+  padding: 24px;
+  display: grid;
+  gap: 10px;
+}
+.idhar_summary div {
+  display: flex;
+  justify-content: space-between;
+}
+.idhar_summary .idhar_total {
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-top: 1px solid #cfcdc8;
+  padding-top: 12px;
+}
+.idhar_actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.idhar_two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.idhar_three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.idhar_box {
+  background: #fff;
+  padding: 28px;
+}
+.idhar_box h3 {
+  margin-bottom: 8px;
+}
+.idhar_form {
+  display: grid;
+  gap: 14px;
+}
+.idhar_error {
+  color: #b00020;
+  font-size: 0.82rem;
+  min-height: 1.2em;
+}
+.idhar_info li {
+  list-style: none;
+  margin-bottom: 14px;
+}
+textarea.idhar_input {
+  min-height: 130px;
+  resize: vertical;
+}
+#idhar_toast {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  background: var(--idhar-black);
+  color: #fff;
+  padding: 14px 22px;
+  transform: translateY(120px);
+  opacity: 0;
+  transition: 0.35s;
+  z-index: 99;
+  border-left: 4px solid var(--idhar-beige);
+}
+#idhar_toast.idhar_show {
+  transform: none;
+  opacity: 1;
+}
+#idhar_footer {
+  background: var(--idhar-black);
+  color: #bdbdbd;
+  padding: 56px 0 24px;
+}
+.idhar_footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+.idhar_footer-grid h4 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.idhar_footer-grid a {
+  display: block;
+  margin-bottom: 6px;
+}
+.idhar_footer-grid a:hover {
+  color: #fff;
+}
+.idhar_copy {
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  padding-top: 18px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .idhar_grid,
+  .idhar_grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .idhar_toolbar {
+    grid-template-columns: 1fr 1fr;
+  }
+  .idhar_toolbar .idhar_input {
+    grid-column: 1/-1;
+  }
+  .idhar_detail,
+  .idhar_two,
+  .idhar_hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .idhar_footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .idhar_three {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .idhar_toggle {
+    display: block;
+  }
+  .idhar_menu {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    gap: 0;
+    border-bottom: 1px solid #e4e2dd;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s;
+  }
+  .idhar_menu.idhar_open {
+    max-height: 360px;
+  }
+  .idhar_menu a {
+    display: block;
+    padding: 14px 5%;
+    border: 0;
+  }
+  .idhar_cart-row {
+    grid-template-columns: 80px 1fr;
+  }
+  .idhar_cart-row img {
+    width: 80px;
+  }
+  .idhar_section {
+    padding: 48px 0;
+  }
+}
+@media (max-width: 480px) {
+  .idhar_grid,
+  .idhar_grid-5,
+  .idhar_grid-3 {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .idhar_footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+/* Foto produk: dipotong rapi agar ukuran seragam walau rasio foto berbeda */
+.idhar_card-img img,
+.idhar_brand-card img,
+.idhar_product-card > img,
+.idhar_two > img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.idhar_hero-grid img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+}
+.idhar_cart-row img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}

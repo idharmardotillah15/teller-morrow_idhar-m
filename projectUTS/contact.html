@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact | TELLER MORROW</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="contact">
+    <header id="idhar_header"></header>
+    <section class="idhar_page-banner">
+      <div class="idhar_container">
+        <h1 class="idhar_title">Contact</h1>
+        <p class="idhar_sub">Ada pertanyaan? Kirim pesan kepada kami.</p>
+      </div>
+    </section>
+    <section class="idhar_section">
+      <div class="idhar_container idhar_two">
+        <ul class="idhar_info">
+          <li><strong>Email</strong><br />tellermorrow@gmail.com</li>
+          <li><strong>Telepon</strong><br />+62 856 0772 0232</li>
+          <li><strong>Alamat</strong><br />Jl. Purbaratu, Tasikmalaya, Jawa Barat</li>
+          <li><strong>Jam Buka</strong><br />Senin - Sabtu, 09.00 - 20.00 WIB</li>
+        </ul>
+        <form class="idhar_form" id="idhar_form" novalidate>
+          <div>
+            <input class="idhar_input" name="name" placeholder="Nama" />
+            <div class="idhar_error" id="idhar_e_name"></div>
+          </div>
+          <div>
+            <input class="idhar_input" name="email" type="email" placeholder="Email" />
+            <div class="idhar_error" id="idhar_e_email"></div>
+          </div>
+          <div>
+            <input class="idhar_input" name="subject" placeholder="Subjek" />
+            <div class="idhar_error" id="idhar_e_subject"></div>
+          </div>
+          <div>
+            <textarea class="idhar_input" name="message" placeholder="Pesan"></textarea>
+            <div class="idhar_error" id="idhar_e_message"></div>
+          </div>
+          <button class="idhar_btn idhar_btn-dark" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+    <footer id="idhar_footer"></footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
